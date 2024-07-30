@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lightbox.css">
+    <link rel="stylesheet" href="style.css?version=4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>EVENTIDE | Official Website</title>
+</head>
+
+<body>
+    <script src="lightbox-plus-jquery.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+    <header>
+        <p id="logo">EVENTIDE</p>
+        <nav>
+            <ul>
+                <a href="#story-section">
+                    <li>STORY</li>
+                </a>
+                <a href="#characters-section-header">
+                    <li>CHARACTERS</li>
+                </a>
+                <a href="#gameplay-section-header">
+                    <li>GAMEPLAY</li>
+                </a>
+                <a href="#media-section-header">
+                    <li>MEDIA</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="videos/eventide-hero-video.mp4">
+            </video>
+            <div class="hero-section-content">
+                <h1 id="hero-section-title">EVENTIDE</h1>
+                <h3 id="release-date">NOW AVAILABLE</h3>
+                <button class="button" type="button">BUY NOW</button>
+            </div>
+        </section>
+        <section class="section-container" id="story-section">
+            <div class="section-container-content" id="story-content">
+                <div data-aos="fade-up" data-aos-duration="1500">
+                    <h1>A DARK SCIENCE-FANTASY THRILLER</h1>
+
+                    <br><br>
+                    <p>In the far reaches of the galaxy, humanity's thirst for expansion and discovery has led to the
+                        colonization of distant planets, powered by the limitless energy of nuclear technology.</p>
+                    <br><br>
+                    <p>On the desolate planet of Nova Locus, a thriving hub of technological and scientific advancements
+                        orbits
+                        a dying star. However, beneath its surface lies an ominous secret—a portal to an ancient,
+                        otherworldly
+                        dimension teeming with Lovecraftian horrors.</p>
+                    <br><br>
+                    <p>Welcome to Eventide, a dark science-fantasy adventure that plunges you into a world where reality
+                        and
+                        nightmare blur, and the very fabric of existence is threatened by cosmic entities beyond human
+                        comprehension.</p>
+                </div>
+            </div>
+        </section>
+        <div class="section-header" id="characters-section-header">
+            <h2>CHARACTERS</h2>
+        </div>
+        <section class="section-container" id="characters-section">
+            <div class="section-container-content" id="characters-content">
+                <div class="character" id="elias-ward-container" data-aos="fade-zoom-in" data-aos-duration="1500">
+                    <div class="character-image-container">
+                        <img src="images/elias-ward-vignette.jpg" alt="">
+                    </div>
+                    <div class="character-description">
+                        <h1>CMDR. ELIAS WARD</h1>
+                        <p>A decorated war hero and leader of Nova Locus' military forces. Haunted by the loss of his
+                            family
+                            during the Great War, Elias is determined to protect the colony at all costs.</p>
+                    </div>
+                </div>
+                <div class="character" id="lila-mercer-container" data-aos="fade-zoom-in" data-aos-duration="1500">
+                    <div class="character-image-container">
+                        <img src="images/lila-mercer-vignette.jpg" alt="">
+                    </div>
+                    <div class="character-description">
+                        <h1>DR. LILA MERCER</h1>
+                        <p>A brilliant scienist specializing in nuclear energy and quantum physics. Dr. Mercer and her
+                            team of scientists are the first to step through the threshold.</p>
+                    </div>
+                </div>
+                <div class="character" id="zara-voss-container" data-aos="fade-zoom-in" data-aos-duration="2000">
+                    <div class="character-image-container">
+                        <img src="images/zara-voss-vignette.jpg" alt="">
+                    </div>
+                    <div class="character-description">
+                        <h1>AGENT ZARA VOSS</h1>
+                        <p>A mysterious operative from the shadowy organization known as The Eclipse Initiative, tasked
+                            with investigating and containing supernatural threats.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-header" id="gameplay-section-header">
+            <h2>GAMEPLAY</h2>
+        </div>
+        <section class="section-container" id="gameplay-section">
+            <div class="section-container-content" id="gameplay-content">
+
+                <div class="gameplay-feature right" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="gameplay-feature-description">
+                        <h1>EXPLORE A WORLD ON THE BRINK</h1>
+                        <p>Every corner of Nova Locus is filled with lore and mystery. Pay attention to your
+                            surroundings,
+                            as the environment itself tells a story of a civilization on the edge of oblivion.</p>
+                    </div>
+                    <div class="gameplay-feature-image">
+                        <img src="images/the-nexus.webp" alt="">
+                    </div>
+                </div>
+                <div class="gameplay-feature left" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="gameplay-feature-description">
+                        <h1>FACE UNIMAGINABLE HORRORS</h1>
+                        <p>Engage in mind-bending encounters that blur the lines between reality and illusion. Expect
+                            the unexpected as you delve deeper into the dark mysteries of Nove Locus and The Nexus.</p>
+                    </div>
+                    <div class="gameplay-feature-image">
+                        <img src="images/surreal-encounters.webp" alt="">
+                    </div>
+                </div>
+                <div class="gameplay-feature right" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="gameplay-feature-description">
+                        <h1>DECIDE THE FATE OF MILLIONS</h1>
+                        <p>Make choices that will impact the fate of Nova Locus and its inhabitants. Every decision you
+                            make will shape the outcome of the story, leading to multiple potential endings.</p>
+                    </div>
+                    <div class="gameplay-feature-image">
+                        <img src="images/decision-making.webp" alt="">
+                    </div>
+                </div>
+                <div class="gameplay-feature left" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="gameplay-feature-description left">
+                        <h1>UNCOVER ANCIENT TECHNOLOGY</h1>
+                        <p>Discover artifacts and relics from an eldritch realm. These mysterious items hold the key to
+                            understanding the cosmic horros that threaten the world of Eventide.</p>
+                    </div>
+                    <div class="gameplay-feature-image">
+                        <img src="images/ancient-technology.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-header" id="media-section-header">
+            <h2>MEDIA</h2>
+        </div>
+        <section class="section-container" id="media-section">
+            <div class="section-container-content" id="media-content">
+                <div class="image-gallery-container">
+                    <div class="gallery">
+                        <a href="images/screenshot-2.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-2.webp" alt="">
+                        </a>
+                        <a href="images/screenshot-8.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-8.webp" alt="">
+                        </a>
+                        <a href="images/screenshot-5.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-5.webp" alt="">
+                        </a>
+                        <a href="images/screenshot-6.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-6.webp" alt="">
+                        </a>
+                        <a href="images/screenshot-3.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-3.webp" alt="">
+                        </a>
+                        <a href="images/screenshot-7.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-7.webp" alt="">
+                        </a>
+                        <a href="images/screenshot-9.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-9.webp" alt="">
+                        </a>
+                        <a href="images/screenshot-10.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-10.webp" alt="">
+                        </a>
+                        <a href="images/screenshot-11.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-11.webp" alt="">
+                        </a>
+                        <a href="images/screenshot-1.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-1.webp" alt="">
+                        </a>
+                        <a href="images/screenshot-4.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-4.webp" alt="">
+                        </a>
+                        <a href="images/screenshot-12.webp" data-lightbox="screenshots">
+                            <img src="images/screenshot-12.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
