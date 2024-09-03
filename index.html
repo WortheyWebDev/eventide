@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lightbox.css">
-    <link rel="stylesheet" href="style.css?version=4">
+    <link rel="stylesheet" href="style.css?version=12">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,35 +13,37 @@
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>EVENTIDE | Official Website</title>
+
+    <meta name="description" content="Eventide: Dark Science-Fantasy Thriller">
+    <meta property="og:title" content="Eventide">
+    <meta property="og:description" content="Eventide: Dark Science-Fantasy Thriller">
+    <meta property="og:image" content="images/eventide-screenshot.png">
+    <meta property="og:url" content="https://ryanworthey.com/eventide/index.html">
+    <meta property="og:type" content="website">
 </head>
 
 <body>
     <script src="lightbox-plus-jquery.js"></script>
+    <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-        }
-    </script>
-
+    <video muted playsinline autoplay loop id="particles-video">
+        <source src="./videos/particles-video.mp4">
+    </video>
+    <input type="checkbox" id="menu">
     <header>
-        <p id="logo">EVENTIDE</p>
+        <a href="#">
+            <p id="logo">EVENTIDE</p>
+        </a>
+        <label for="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
         <nav>
-            <ul>
-                <a href="#story-section">
-                    <li>STORY</li>
-                </a>
-                <a href="#characters-section-header">
-                    <li>CHARACTERS</li>
-                </a>
-                <a href="#gameplay-section-header">
-                    <li>GAMEPLAY</li>
-                </a>
-                <a href="#media-section-header">
-                    <li>MEDIA</li>
-                </a>
-            </ul>
+            <a href="#story-section" id="nav-story">STORY</a>
+            <a href="#characters-section-header" id="nav-characters">CHARACTERS</a>
+            <a href="#gameplay-section-header" id="nav-gameplay">GAMEPLAY</a>
+            <a href="#media-section-header" id="nav-media">MEDIA</a>
         </nav>
     </header>
     <main>
@@ -136,7 +138,7 @@
                     <div class="gameplay-feature-description">
                         <h1>FACE UNIMAGINABLE HORRORS</h1>
                         <p>Engage in mind-bending encounters that blur the lines between reality and illusion. Expect
-                            the unexpected as you delve deeper into the dark mysteries of Nove Locus and The Nexus.</p>
+                            the unexpected as you delve deeper into the dark mysteries of Nova Locus and The Nexus.</p>
                     </div>
                     <div class="gameplay-feature-image">
                         <img src="images/surreal-encounters.webp" alt="">
@@ -213,7 +215,10 @@
         </section>
     </main>
     <footer>
-
+        <img id="developer-logo" src="assets/worthey-games-logo.png" alt="Worthey Games logo.">
+        <p>&copy;Worthey Games. All rights reserved.</p>
+        <p>Worthey Games is not a registered trademark or real company.</p>
+        <a rel="nofollow" target="_blank" href="http://www.videezy.com/">Free Stock videos by Videezy</a>
     </footer>
 </body>
 

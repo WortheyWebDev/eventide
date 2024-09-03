@@ -26,14 +26,33 @@ p {
 
 a {
     text-decoration: none;
+    color: #ffffff;
+}
+
+#particles-video {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    object-fit: cover;
+    z-index: 1;
+    mix-blend-mode: lighten;
 }
 
 header {
+    background-color: #000000cd;
     display: flex;
     align-items: center;
-    color: #ffffff;
     gap: 2rem;
     padding: 1rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8)
 }
 
 #logo {
@@ -41,16 +60,25 @@ header {
     font-weight: 100;
 }
 
-header>nav>ul {
+header>nav {
     display: flex;
     list-style-type: none;
     gap: 2rem;
-}
-
-header>nav>ul>a {
-    color: #ffffff;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+header>nav>a:hover {
+    color: #ffd700;
+}
+
+input {
+    display: none;
+}
+
+header>nav>a {
+    color: #ffffff;
+    transition: 0.5s;
 }
 
 .hero {
@@ -62,7 +90,7 @@ header>nav>ul>a {
     height: 100%;
     object-fit: cover;
     width: 100%;
-    filter: brightness(80%);
+    filter: brightness(70%);
 }
 
 .hero-section-content {
@@ -78,6 +106,19 @@ header>nav>ul>a {
     font-family: "Lato", sans-serif;
     font-size: 18vw;
     font-weight: 100;
+    opacity: 0;
+    animation: fade-in 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#release-date,
+.button,
+header {
+    animation: fade-in 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
 #release-date {
@@ -97,7 +138,7 @@ header>nav>ul>a {
 }
 
 #story-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/story-section-background.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/story-section-background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -126,11 +167,33 @@ header>nav>ul>a {
 }
 
 .section-header {
+    position: relative;
     background-image: url(assets/section-header.png);
     background-size: cover;
     background-position: right;
     padding: 20px;
     text-align: right;
+}
+
+.section-header::before,
+.section-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    z-index: 1;
+}
+
+.section-header::before {
+    top: 0;
+    background: linear-gradient(to right, #333333, #00000000);
+}
+
+.section-header::after {
+    bottom: 0;
+    background: linear-gradient(to right, #000000, #333333);
+    /* Bottom gradient */
 }
 
 .section-header>h2 {
@@ -140,7 +203,7 @@ header>nav>ul>a {
 }
 
 #gameplay-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/gameplay-section-background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/gameplay-section-background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -177,8 +240,15 @@ header>nav>ul>a {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
+#story-section,
+#characters-section-header,
+#gameplay-section-header,
+#media-section-header {
+    scroll-margin-top: 70px;
+}
+
 #characters-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/characters-section-background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(images/characters-section-background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -252,6 +322,59 @@ header>nav>ul>a {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/media-section-background.jpg);
 }
 
+footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+    border-top: 1px solid #333333;
+    padding: 20px 0 50px 0;
+}
+
+footer>p {
+    font-size: .8rem;
+}
+
+#developer-logo {
+    width: 200px;
+    padding: 20px;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+} 
+
+@media (max-height: 430px) {
+    nav {
+        top: 48px !important;
+    }
+
+    #story-content {
+        width: 80vw;
+    }
+
+    .hero-section-content {
+        margin-top: 10px;
+    }
+
+    header {
+        height: 48px;
+    }
+
+    .hero {
+        height: 100vh;
+    }
+
+    #release-date {
+        font-size: 2rem;
+    }
+}
+
 @media (max-width: 1174px) {
     #gameplay-content {
         width: 60vw;
@@ -283,8 +406,76 @@ header>nav>ul>a {
     }
 }
 
-footer {
-    background-color: #000000;
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        background-color: #000000;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        height: 0;
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    nav a:nth-child(1) {
+        margin-top: 50px;
+    }
+
+    label {
+        width: 45px;
+        height: 20px;
+        position: relative;
+    }
+
+    label div {
+        width: 100%;
+        height: 5px;
+        background: #ffffff;
+        position: absolute;
+        transform: translateY(-50%);
+        border-radius: 99px;
+        transition: 0.3s;
+        transform: scale(1);
+    }
+
+    label div:nth-child(1) {
+        top: 0;
+    }
+
+    label div:nth-child(2) {
+        top: 50%;
+    }
+
+    label div:nth-child(3) {
+        top: 100%;
+    }
+
+    input:checked+header nav {
+        height: 100vh;
+    }
+
+    input:checked+header label div:nth-child(1) {
+        transform: rotate(45deg);
+        top: 50%;
+    }
+
+    input:checked+header label div:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 50%;
+    }
+
+    input:checked+header label div:nth-child(2) {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
 
 @media (max-width: 630px) {
@@ -311,6 +502,10 @@ footer {
 
     #story-content {
         width: 90%;
+    }
+
+    .gameplay-feature {
+        gap: 10px;
     }
 
     .gameplay-feature-description {
