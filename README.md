@@ -29,7 +29,7 @@ cd eventide
 ### Characters Section
 ![Screenshot](https://github.com/WortheyWebDev/eventide/blob/main/screenshots/eventide-characters-3.png)
 
-### Features Section
+### Gameplay Section
 ![Screenshot](https://github.com/WortheyWebDev/eventide/blob/main/screenshots/eventide-features-4.png)
 
 ---
