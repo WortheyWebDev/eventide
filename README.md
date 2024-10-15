@@ -20,6 +20,9 @@ cd eventide
 3. Open the "index.html" file in your preferred browser
 
 ## Screenshot
-
+![Screenshot](https://github.com/WortheyWebDev/eventide/blob/main/screenshots/eventide-hero-1.png)
+![Screenshot](https://github.com/WortheyWebDev/eventide/blob/main/screenshots/eventide-story-2.png)
+![Screenshot](https://github.com/WortheyWebDev/eventide/blob/main/screenshots/eventide-characters-3.png)
+![Screenshot](https://github.com/WortheyWebDev/eventide/blob/main/screenshots/eventide-features-4.png)
 
 ---
