@@ -1,0 +1,548 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: auto;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+h1 {
+    font-family: "Cinzel", serif;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#particles-video {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    object-fit: cover;
+    z-index: 1;
+    mix-blend-mode: lighten;
+}
+
+header {
+    background-color: #000000cd;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8)
+}
+
+#logo {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+header>nav {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+header>nav>a:hover {
+    color: #ffd700;
+}
+
+input {
+    display: none;
+}
+
+header>nav>a {
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.hero {
+    height: 80vh;
+    clip-path: polygon(50% 95%, 100% 100%, 100% 0, 0 0, 0 100%);
+}
+
+.hero-video {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(60%);
+}
+
+.hero-section-content {
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#hero-section-title {
+    font-family: "Lato", sans-serif;
+    font-size: 18vw;
+    font-weight: 100;
+    opacity: 0;
+    animation: fade-in 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#release-date,
+.button,
+header {
+    animation: fade-in 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#release-date {
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+.button {
+    font-weight: bold;
+    background-color: #ffd700;
+    border: 2px solid #0d0d0d;
+    color: #000000;
+    padding: 10px;
+    width: 20em;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#story-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/story-section-background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#story-content {
+    width: 45%;
+}
+
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    padding: 100px 0 100px 0;
+    text-shadow: 0px 0px 5px #0d0d0db2, 0px 0px 5px #0d0d0db2, 0px 0px 5px #0d0d0db2, 0px 0px 4px #0d0d0db2, 0px 0px 3px #0d0d0db2, 0px 0px 2px #0d0d0db2;
+    box-shadow: inset 100px 100px 100px rgba(0, 0, 0, 1), inset -100px 0 100px rgba(0, 0, 0, 1);
+}
+
+.section-container-content {
+    width: 60vw;
+    text-align: center;
+}
+
+#gameplay-content {
+    width: 1150px;
+}
+
+.section-header {
+    position: relative;
+    background-image: url(assets/section-header.png);
+    background-size: cover;
+    background-position: right;
+    padding: 20px;
+    text-align: right;
+}
+
+.section-header::before,
+.section-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    z-index: 1;
+}
+
+.section-header::before {
+    top: 0;
+    background: linear-gradient(to right, #333333, #00000000);
+}
+
+.section-header::after {
+    bottom: 0;
+    background: linear-gradient(to right, #000000, #333333);
+    /* Bottom gradient */
+}
+
+.section-header>h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    padding-right: 18%;
+}
+
+#gameplay-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/gameplay-section-background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#gameplay-content {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.gameplay-feature {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+}
+
+.gameplay-feature-description {
+    padding: 20px;
+}
+
+.gameplay-feature-image>img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.gameplay-feature.left {
+    flex-direction: row-reverse;
+    text-align: left;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.right {
+    text-align: right;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+#story-section,
+#characters-section-header,
+#gameplay-section-header,
+#media-section-header {
+    scroll-margin-top: 70px;
+}
+
+#characters-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(images/characters-section-background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#characters-content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100vw;
+}
+
+#elias-ward-container {
+    background-image: linear-gradient(to bottom, #00000000, #000000 45%, #0e0e0e);
+    padding-bottom: 100px;
+    clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
+}
+
+#lila-mercer-container {
+    background-image: linear-gradient(to bottom, #00000000, #000000 45%, #040a1c);
+    padding-bottom: 100px;
+    clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
+}
+
+#zara-voss-container {
+    background-image: linear-gradient(to bottom, #00000000, #000000 45%, #210e0e);
+    padding-bottom: 100px;
+    clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+.character-image-container>img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 35%, black 75%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 35%, black 75%, transparent);
+    filter: brightness(90%);
+}
+
+.character-description {
+    width: 45%;
+}
+
+.image-gallery-container {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid rgb(118, 118, 118);
+}
+
+#media-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/media-section-background.jpg);
+}
+
+footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+    border-top: 1px solid #333333;
+    padding: 20px 0 50px 0;
+}
+
+footer>p {
+    font-size: .8rem;
+}
+
+#developer-logo {
+    width: 200px;
+    padding: 20px;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+} 
+
+@media (max-height: 430px) {
+    nav {
+        top: 48px !important;
+    }
+
+    #story-content {
+        width: 80vw;
+    }
+
+    .hero-section-content {
+        margin-top: 10px;
+    }
+
+    header {
+        height: 48px;
+    }
+
+    .hero {
+        height: 100vh;
+    }
+
+    #release-date {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1174px) {
+    #gameplay-content {
+        width: 60vw;
+    }
+
+    .gameplay-feature-description>h1 {
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .gameplay-feature-description>p {
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .gameplay-feature,
+    .gameplay-feature.left {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .gameplay-feature.left,
+    .right {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    }
+
+    .character-description {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        background-color: #000000;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        height: 0;
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    nav a:nth-child(1) {
+        margin-top: 50px;
+    }
+
+    label {
+        width: 45px;
+        height: 20px;
+        position: relative;
+    }
+
+    label div {
+        width: 100%;
+        height: 5px;
+        background: #ffffff;
+        position: absolute;
+        transform: translateY(-50%);
+        border-radius: 99px;
+        transition: 0.3s;
+        transform: scale(1);
+    }
+
+    label div:nth-child(1) {
+        top: 0;
+    }
+
+    label div:nth-child(2) {
+        top: 50%;
+    }
+
+    label div:nth-child(3) {
+        top: 100%;
+    }
+
+    input:checked+header nav {
+        height: 100vh;
+    }
+
+    input:checked+header label div:nth-child(1) {
+        transform: rotate(45deg);
+        top: 50%;
+    }
+
+    input:checked+header label div:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 50%;
+    }
+
+    input:checked+header label div:nth-child(2) {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 630px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #release-date {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    #gameplay-content {
+        gap: 50px;
+    }
+
+    .section-container-content,
+    #gameplay-content {
+        width: 90vw;
+    }
+
+    #story-content {
+        width: 90%;
+    }
+
+    .gameplay-feature {
+        gap: 10px;
+    }
+
+    .gameplay-feature-description {
+        padding: 0;
+    }
+
+    .gameplay-feature-description>h1 {
+        font-size: 2rem;
+    }
+
+    .gameplay-feature-description>p {
+        font-size: 1.3rem;
+    }
+
+    #gameplay-content {
+        background-color: 90vw;
+    }
+
+    .section-header>h2 {
+        padding-right: 20px;
+        text-align: right;
+    }
+
+    .section-container {
+        padding: 50px 0 50px 0;
+
+    }
+
+    .character-description {
+        width: 90%;
+    }
+
+    .character {
+        padding-top: 20px;
+    }
+
+    #characters-content {
+        gap: 20px;
+    }
+}
